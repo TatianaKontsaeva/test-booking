@@ -7,10 +7,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import com.mts.pages.HomePage;
-import com.mts.pages.SearchResultsPage;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
-import static com.codeborne.selenide.Selenide.*;
 import io.qameta.allure.*;
 
 @Epic("Функциональность бронирования")
@@ -19,7 +17,6 @@ public class BookingTest {
 
     @BeforeAll
     public static void setupAll() {
-        // Этот метод будет вызван перед всеми тестами
         System.out.println("Настройка окружения...");
         SelenideLogger.addListener("AllureSelenide",
                 new AllureSelenide().screenshots(true).savePageSource(true));
@@ -29,8 +26,7 @@ public class BookingTest {
 
     @BeforeEach
     public void setup() {
-        // Этот метод будет вызываться перед каждым тестом
-        System.out.println("Запуск теста поиска отелей...");
+        System.out.println("Запуск теста...");
         
     }
 
